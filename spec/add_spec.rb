@@ -12,4 +12,10 @@ RSpec.describe Add do
         add = Add.new
         expect(add).to respond_to(:addition)
     end
+
+    # checks if it adds two numbers
+    it "adds two numbers" do
+        add = Add.new.addition(2, 3)
+        expect(add).to eq(5)
+    end
 end

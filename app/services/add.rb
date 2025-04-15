@@ -1,4 +1,4 @@
 class Add
-    def addition
+    def addition(*args)
     end
 end
