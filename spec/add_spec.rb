@@ -6,4 +6,10 @@ RSpec.describe Add do
         add = Add.new
         expect(add).to be_kind_of(Add)
     end
+
+    # checks whether the Add class responds to the addition method
+    it "responds to addition" do
+        add = Add.new
+        expect(add).to respond_to(:addition)
+    end
 end
