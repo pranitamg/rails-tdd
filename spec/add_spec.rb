@@ -38,7 +38,12 @@ RSpec.describe Add do
     end
 
     # 7. checks if it returns correct output if empty array is passed
-    it "returns output if empty array is passed" do
+    it "returns error if empty array is passed" do
         expect { Add.new.addition([]) }.to raise_error(ArgumentError, "Empty array provided")
+    end
+
+    # 8. checks if all the inputs provided are valid numbers
+    it "returns error for non-numeric input" do
+        expect { Add.new.addition([1, "a"]) }.to raise_error(ArgumentError, "All elements must be valid numbers")
     end
 end
