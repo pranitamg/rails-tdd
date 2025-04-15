@@ -24,4 +24,16 @@ RSpec.describe Add do
         add = Add.new.addition(2, 3)
         expect(add).to eq(5)
     end
+
+    # checks if it adds an array of numbers
+    it "adds an array of numbers" do
+        add = Add.new.addition([1, 2, 3, 4, 5])
+        expect(add).to eq(15)
+    end
+
+    # checks if it returns 0 if 0 is passed as an argument
+    it "returns 0 if 0 is passed as an argument" do
+        add = Add.new.addition(0)
+        expect(add).to eq(0)
+    end
 end

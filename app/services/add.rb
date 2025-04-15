@@ -1,5 +1,7 @@
 class Add
-    def addition(a, b)
-        a + b
+    def addition(*args)
+        values = args.flatten
+        p "array: #{values}"
+        values.sum
     end
 end
